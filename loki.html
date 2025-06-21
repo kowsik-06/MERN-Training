@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>React in HTML</title>
+
+  <!-- React and ReactDOM -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Babel for JSX support -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React JSX Code -->
+  <script type="text/babel">
+    const book = {
+      title: "The Alchemist",
+      author: "Paulo Coelho",
+      year: 1988
+    };
+
+    function App() {
+      return (
+        <div className="card">
+          <h1>📘 Book Info</h1>
+          <p><strong>Title:</strong> {book.title}</p>
+          <p><strong>Author:</strong> {book.author}</p>
+          <p><strong>Year:</strong> {book.year}</p>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
