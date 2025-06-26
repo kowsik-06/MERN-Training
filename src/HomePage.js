@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./App.css";
 import { FaInstagram, FaGoogle } from "react-icons/fa";
 
+
 function HomePage() {
   return (
     <div className="home-body">
@@ -26,6 +27,7 @@ function HomePage() {
           Own What You Deserve.<br />
           Bid Smart. Win Big. Own the Best.
         </h2>
+        <Link to="/halloffame" className="hall-btn">🏅 Visit Hall of Fame</Link>
       </div>
 
       {/* 🔻 Footer Section */}

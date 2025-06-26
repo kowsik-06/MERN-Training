@@ -8,6 +8,7 @@ import LoginPage from './LoginPage';
 import SignupPage from './SignupPage';
 import ContactPage from './ContactPage';
 import UserProfilePage from './UserProfilePage';
+import HallOfFamePage from './HallOfFamePage';
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/profile" element={<UserProfilePage />} />
+        <Route path="/halloffame" element={<HallOfFamePage />} />
 
 
       </Routes>

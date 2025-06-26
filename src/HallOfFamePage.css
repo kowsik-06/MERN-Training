@@ -1,0 +1,58 @@
+.hof-background {
+  background: linear-gradient(to bottom right, #fdfbfb, #ebedee);
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.hof-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.hof-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.hof-card {
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.hof-card:hover {
+  transform: scale(1.03);
+}
+
+.hof-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.story {
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+}
+
+.back-home {
+  display: inline-block;
+  margin-top: 30px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-home:hover {
+  text-decoration: underline;
+}
