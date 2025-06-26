@@ -6,14 +6,30 @@ function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = (e) => { 
+  const handleLogin = async (e) => {
     e.preventDefault();
-    alert(`Logged in as: ${email}`);
+
+    try {
+      const response = await fetch('http://localhost:5000/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        alert('Login successful');
+      } else {
+        alert(data.message);
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Login failed');
+    }
   };
 
   return (
-    <div className="login-background"> {/* ✅ Add this wrapper */}
-      {/* 🔻 Header */}
+    <div className="login-background">
       <header className="login-header">
         <h1>Auction Portal</h1>
         <nav>
@@ -24,24 +40,11 @@ function LoginPage() {
         </nav>
       </header>
 
-      {/* 🔻 Login Form */}
       <div className="auth-container">
         <h2>Login</h2>
         <form onSubmit={handleLogin}>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            required
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <input type="email" placeholder="Email" value={email} required onChange={(e) => setEmail(e.target.value)} />
+          <input type="password" placeholder="Password" value={password} required onChange={(e) => setPassword(e.target.value)} />
           <button type="submit">Login</button>
         </form>
         <p>Don't have an account? <Link to="/signup">Register</Link></p>
