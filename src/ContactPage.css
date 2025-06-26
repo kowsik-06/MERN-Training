@@ -1,0 +1,95 @@
+.contact-body {
+  background: linear-gradient(to right, #2c3e50, #3498db);
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-header {
+  text-align: center;
+  padding: 50px 20px 20px;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 40px;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.contact-form button {
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ffc107;
+}
+
+.contact-info {
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.contact-footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.back-home-btn {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.back-home-btn button {
+  background-color: #fff;
+  color: #2c3e50;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.back-home-btn button:hover {
+  background-color: #ffd700;
+  color: #000;
+}

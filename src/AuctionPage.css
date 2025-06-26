@@ -1,0 +1,72 @@
+auction-body{
+  background:url(./asset/auction.jpg) ;
+}
+header {
+  background-color: rgba(51, 51, 51, 0.8);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.auction-section {
+  padding: 30px;
+  
+}
+
+.auction-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.auction-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 220px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auction-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+button {
+  background: linear-gradient(135deg, #ff9933, #ffcc00);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ffaa00, #ffee00);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+

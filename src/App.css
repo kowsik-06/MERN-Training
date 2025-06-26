@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-body {
+  height: 100vh;
+  background: url('./asset/home.jpg') center center/cover no-repeat;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Header */
+header {
+  background-color: rgba(51, 51, 51, 0.5);
+  backdrop-filter: blur(8px);
   color: white;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  font-family: "Roboto Slab", serif;
+  top: 0;
+  z-index: 10;
+}
+header,
+header nav a {
+  font-family: "Roboto Slab", serif;
+  font-weight: 600; /* Optional: change to 400, 700, etc. */
 }
 
-.App-link {
-  color: #61dafb;
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-@keyframes App-logo-spin {
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffd700;
+}
+
+.slogan-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slogan {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px black;
+  text-align: center;
+  padding: 20px;
+  
+}
+@keyframes slideIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateX(-100%);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateX(0);
   }
+}
+
+.slogan {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px black;
+  text-align: center;
+  padding: 20px;
+  animation: slideIn 1.2s ease-out forwards;
+}
+.footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-family: 'Roboto Slab', serif;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-icons {
+  margin-top: 8px;
+}
+
+.footer-icons a {
+  color: white;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+  color: #ffd700;
 }
